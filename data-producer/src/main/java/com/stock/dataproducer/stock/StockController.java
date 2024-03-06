@@ -12,7 +12,7 @@ public class StockController {
     private final SimpMessagingTemplate template;
     private final StockService stockService;
 
-    @Scheduled(fixedRate = 5)
+    @Scheduled(fixedRate = 200)
     public void sendStockOnTheRegular() {
 
         long[] stocks = stockService.getStocks();
