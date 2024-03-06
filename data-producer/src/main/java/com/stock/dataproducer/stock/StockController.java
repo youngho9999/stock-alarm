@@ -16,6 +16,6 @@ public class StockController {
     public void sendStockOnTheRegular() {
 
         long[] stocks = stockService.getStocks();
-        template.convertAndSend("/topic/b", stocks);
+        template.convertAndSend("/topic/stock", stocks);
     }
 }
